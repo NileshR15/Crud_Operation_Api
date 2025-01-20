@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "c4b762d1-c66f-4932-9887-e78a7402ce1f",
+		"name": "CRUDOperationsApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30948565",
+		"_collection_link": "https://winter-resonance-930724.postman.co/workspace/New-Team-Workspace~84c25eda-f45f-4adc-b309-37c52b494eca/collection/30948565-c4b762d1-c66f-4932-9887-e78a7402ce1f?action=share&source=collection_link&creator=30948565"
+	},
+	"item": [
+		{
+			"name": "Category Collections",
+			"item": [
+				{
+					"name": "get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/categories/1\"\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "get category with paginations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/categories?page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/categories?page=0\"\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "create categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Buty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \"http://localhost:8080/api/categories\" \\\r\n     -H \"Content-Type: application/json\" \\\r\n     -d '{\"name\": \"Electronics\"}'\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Buty update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/categories/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories",
+								"3"
+							]
+						},
+						"description": "Generated from cURL: curl -X PUT \"http://localhost:8080/api/categories/1\" \\\r\n     -H \"Content-Type: application/json\" \\\r\n     -d '{\"name\": \"Updated Electronics\"}'\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X DELETE \"http://localhost:8080/api/categories/1\"\r\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product CRUD Operations",
+			"item": [
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/products/1\"\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products (with Pagination)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products?page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/products?page=0\"\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a New Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Smartphone\",\r\n    \"price\": 299.99,\r\n    \"category\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \"http://localhost:8080/api/products\" \\\r\n     -H \"Content-Type: application/json\" \\\r\n     -d '{\"name\": \"Smartphone\", \"price\": 299.99, \"category\": {\"id\": 1}}'\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product by ID bash Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Smartphone\",\r\n    \"price\": 349.99,\r\n    \"category\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X PUT \"http://localhost:8080/api/products/1\" \\\r\n     -H \"Content-Type: application/json\" \\\r\n     -d '{\"name\": \"Updated Smartphone\", \"price\": 349.99, \"category\": {\"id\": 1}}'\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X DELETE \"http://localhost:8080/api/products/1\"\r\n"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
